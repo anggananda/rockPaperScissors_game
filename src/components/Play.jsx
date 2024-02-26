@@ -44,16 +44,16 @@ const Play = () => {
     }
   }
   return (
-    <div className="border h-[100dvh] flex justify-center items-center">÷
-    <div className="p-8 flex flex-col items-center gap-20 shadow-md">
+    <div className="border h-[100dvh] flex justify-center items-center bg-[#eaeaea]">÷
+    <div className="p-8 flex w-[60%] flex-col items-center gap-20 shadow-md rounded-md bg-[#fff]">
       <div className="flex justify-between gap-60 items-center">
         <h1 className='text-xl font-bold px-3 py-1 text-[#fff] bg-slate-800 rounded-md'>health: {health}</h1>
         <h1 className='text-xl font-bold px-3 py-1 text-[#fff] bg-slate-800 rounded-md'>score: {score}</h1>
       </div>
 
-      <div className="">
-        <h1>User : {choice}</h1>
-        <h1>Computer: {choiceCom}</h1>
+      <div className="flex flex-col p-4 h-[350px] border border-[rgba(0,0,0,0.1)] rounded-md shadow-lg w-[70%] justify-between items-center">
+        <h1 className="flex flex-col items-center gap-6"><p>🖥 Com Choice</p> <p className="text-6xl">{choiceCom}</p></h1>
+        <h1 className="flex flex-col-reverse items-center gap-6"><p>👨🏼 Your Choice</p> <p className="text-6xl">{choice}</p></h1>
       </div>
 
       <div>
