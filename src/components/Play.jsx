@@ -6,7 +6,7 @@ const Play = () => {
   const [choiceCom, setChoiceCom] = useState("");
   const [result, setResult] = useState("");
   const [score, setScore] = useState(0)
-  const [health, setHealth] = useState(5)
+  const [health, setHealth] = useState(3)
 
   const handleUserChoice = choi =>{
     setChoice(choi)
@@ -33,13 +33,13 @@ const Play = () => {
       setResult("Com Win")
       setHealth(prev => prev - 1)
       if(health - 1 < 0){
-        const confirm = window.confirm("Play again?")
+        const confirm = window.confirm("Oh Noo You Lose 😔, Play again?")
         confirm ? window.location.href = '/play' : window.location.href = '/'
       }
     }
 
     if(score+1==5){
-      const confirm = window.confirm("You Win, play again?")
+      const confirm = window.confirm("You Win 😃, play again?")
       confirm ? window.location.href = '/play' : window.location.href = '/'
     }
   }
@@ -52,8 +52,8 @@ const Play = () => {
       </div>
 
       <div className="flex flex-col p-4 h-[350px] border border-[rgba(0,0,0,0.1)] rounded-md shadow-lg w-[70%] justify-between items-center">
-        <h1 className="flex flex-col items-center gap-6"><p>🖥 Com Choice</p> <p className="text-6xl">{choiceCom}</p></h1>
-        <h1 className="flex flex-col-reverse items-center gap-6"><p>👨🏼 Your Choice</p> <p className="text-6xl">{choice}</p></h1>
+        <h1 className="flex flex-col items-center gap-6"><p className="px-3 py-2 rounded-md bg-slate-800 text-white font-bold flex flex-col items-center"> <span>🖥</span> Com Choice</p> <p className="text-6xl">{choiceCom}</p></h1>
+        <h1 className="flex flex-col-reverse items-center gap-6"><p className="px-3 py-2 rounded-md bg-slate-800 text-white font-bold flex flex-col-reverse items-center"> <span>👨🏼</span> Your Choice</p> <p className="text-6xl">{choice}</p></h1>
       </div>
 
       <div>
