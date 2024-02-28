@@ -26,12 +26,21 @@ const Home = () => {
           loop
         />
 
+      <div className="flex justify-center items-center gap-8">
         <Link
           className="bg-slate-800 px-4 py-2 rounded-md text-[#fff] hover:bg-slate-700"
           to="/play"
         >
           Play
         </Link>
+
+        <Link
+          className="bg-slate-800 px-4 py-2 rounded-md text-[#fff] hover:bg-slate-700"
+          to="/how"
+        >
+          Guide
+        </Link>
+        </div>
       </div>
 
       <ReactTyped
